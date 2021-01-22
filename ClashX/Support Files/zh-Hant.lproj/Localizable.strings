@@ -1,0 +1,162 @@
+
+/* No comment provided by engineer. */
+"Add a remote config" = "新增訂閱";
+
+/* No comment provided by engineer. */
+"Apply and Quit" = "套用並關閉";
+
+/* No comment provided by engineer. */
+"Auto Close Connection" = "切換代理時自動中斷連接";
+
+/* No comment provided by engineer. */
+"Benchmark" = "測速";
+
+/* No comment provided by engineer. */
+"Benchmark Finished!" = "測速完成！";
+
+/* No comment provided by engineer. */
+"Benchmark has begun, please wait." = "正在啟動全節點延遲測試，請稍等";
+
+/* No comment provided by engineer. */
+"Benchmark is processing, please wait." = "正在進行全節點延遲測試，請稍等";
+
+/* No comment provided by engineer. */
+"Cancel" = "取消";
+
+/* No comment provided by engineer. */
+"ClashX fail to create ~/.config/clash folder. Please check privileges or manually create folder and restart ClashX." = "無法創建 ~/.config/clash 目錄，請確認已開啟相應權限或手動新建該目錄後重啟 ClashX";
+
+/* No comment provided by engineer. */
+"ClashX needs to install/update a helper tool with administrator privileges to set system proxy quickly.If not helper tool installed, ClashX won't be able to set your system proxy" = "ClashX 需要額外安裝附加套件（需要系統權限）以便快速設定您的系統代理，如未安裝附加套件，ClashX 將無法更改您的系統代理設定。";
+
+/* No comment provided by engineer. */
+"ClashX Start Error!" = "ClashX 啟動失敗！";
+
+/* No comment provided by engineer. */
+"Config file have been changed" = "配置文件已更改";
+
+/* No comment provided by engineer. */
+"Config loading Fail!" = "配置文件載入失敗！";
+
+/* No comment provided by engineer. */
+"Direct" = "直連";
+
+/* No comment provided by engineer. */
+"Disable Restore Proxy Setting" = "關閉 ClashX 自動還原系統代理";
+
+/* No comment provided by engineer. */
+"Download fail" = "下載失敗！";
+
+/* No comment provided by engineer. */
+"Enhance proxy list render" = "優化節點列表顯示";
+
+/* No comment provided by engineer. */
+"fail" = "失敗";
+
+/* No comment provided by engineer. */
+"Fail:" = "失敗：";
+
+/* No comment provided by engineer. */
+"Global" = "全局";
+
+/* No comment provided by engineer. */
+"Install" = "安裝";
+
+/* No comment provided by engineer. */
+"Invalid input" = "非法輸入";
+
+/* No comment provided by engineer. */
+"Lecgy Install" = "傳統方式安裝";
+
+/* No comment provided by engineer. */
+"Need to Restart the ClashX to Take effect, Please start clashX manually" = "重啟後才會生效，請手動重啟 ClashX";
+
+/* No comment provided by engineer. */
+"Never" = "從未";
+
+/* No comment provided by engineer. */
+"OK" = "確認";
+
+/* No comment provided by engineer. */
+"Ports Open Fail, Please try to restart ClashX" = "端口啟動失敗，請重啟 ClashX（或重啟電腦）";
+
+/* No comment provided by engineer. */
+"Edit Config" = "編輯基本配置文件";
+
+/* No comment provided by engineer. */
+"Prelease" = "預發佈版本";
+
+/* No comment provided by engineer. */
+"Proxy Mode" = "路由模式";
+
+/* No comment provided by engineer. */
+"Proxy settings are changed by another process. ClashX is no longer the default system proxy." = "Proxy settings are changed by another process. ClashX is no longer the default system proxy.";
+
+/* No comment provided by engineer. */
+"Quit" = "結束應用程式";
+
+/* No comment provided by engineer. */
+"Reload Config Fail" = "重載配置文件失敗！";
+
+/* No comment provided by engineer. */
+"Reload Config Succeed" = "重載配置文件成功！";
+
+/* No comment provided by engineer. */
+"Remote Config Format Error" = "節點訂閱配置格式錯誤！";
+
+/* No comment provided by engineer. */
+"Remote Config Update" = "更新訂閱";
+
+/* No comment provided by engineer. */
+"Remote Config Update Fail" = "更新訂閱失敗！";
+
+/* No comment provided by engineer. */
+"ReTest" = "重新測速";
+
+/* No comment provided by engineer. */
+"Rule" = "分流";
+
+/* No comment provided by engineer. */
+"Show speedTest at top" = "頂部顯示測速按鈕";
+
+/* No comment provided by engineer. */
+"Stable" = "穩定版";
+
+/* No comment provided by engineer. */
+"Succeed!" = "成功！";
+
+/* No comment provided by engineer. */
+"Success" = "成功";
+
+/* No comment provided by engineer. */
+"Success!" = "成功！";
+
+/* No comment provided by engineer. */
+"System Proxy Changed" = "系統代理設定已被其他程式更改";
+
+/* No comment provided by engineer. */
+"Tap to reload config" = "輕觸一下來重載配置文件";
+
+/* No comment provided by engineer. */
+"Testing" = "正在測速...";
+
+/* No comment provided by engineer. */
+"The remote config name is duplicated" = "訂閱配置文件名稱重複了";
+
+/* No comment provided by engineer. */
+"Update GEOIP Database" = "更新 GeoIP 資料庫";
+
+/* No comment provided by engineer. */
+"Updating" = "正在更新...";
+
+/* No comment provided by engineer. */
+"Upgrade Channel" = "更新版本選擇";
+
+/* No comment provided by engineer. */
+"URL is not valid" = "連結無效";
+
+/* No comment provided by engineer. */
+"Use iCloud" = "使用 iCloud";
+
+/* No comment provided by engineer. */
+"Use reload config to try reconnect." = "透過重載配置文件嘗試重啟連接";

@@ -1,0 +1,267 @@
+
+/* Class = "NSMenuItem"; title = "ERROR"; ObjectID = "0iu-lB-eZN"; */
+"0iu-lB-eZN.title" = "ERROR";
+
+/* Class = "NSMenuItem"; title = "ClashX"; ObjectID = "1Xt-HY-uBw"; Note = "#bc-ignore!"; */
+"1Xt-HY-uBw.title" = "ClashX";
+
+/* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; Note = "#bc-ignore!"; */
+"1b7-l0-nxx.title" = "Find";
+
+/* Class = "NSButtonCell"; title = "Update"; ObjectID = "2Rx-ih-aGW"; */
+"2Rx-ih-aGW.title" = "更新";
+
+/* Class = "NSMenuItem"; title = "Log level"; ObjectID = "3Da-fL-Mzr"; */
+"3Da-fL-Mzr.title" = "日誌等級";
+
+/* Class = "NSMenuItem"; title = "Find"; ObjectID = "4EN-yA-p0u"; Note = "#bc-ignore!"; */
+"4EN-yA-p0u.title" = "Find";
+
+/* Class = "NSButtonCell"; title = "Add"; ObjectID = "51K-nB-xLS"; */
+"51K-nB-xLS.title" = "新增";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; Note = "#bc-ignore!"; */
+"5QF-Oa-p0T.title" = "編輯";
+
+/* Class = "NSViewController"; title = "Remote Configs"; ObjectID = "6WI-Hi-v9j"; */
+"6WI-Hi-v9j.title" = "節點訂閱管理";
+
+/* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; Note = "#bc-ignore!"; */
+"6dh-zS-Vam.title" = "Redo";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "7G6-oO-vNs"; */
+"7G6-oO-vNs.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Copy shell command (External IP)"; ObjectID = "7wl-vK-5JO"; */
+"7wl-vK-5JO.title" = "複製終端機代理指令（外部 IP）";
+
+/* Class = "NSTextFieldCell"; title = "GitHub for ClashX:"; ObjectID = "89f-5u-Eo0"; Note = "#bc-ignore!"; */
+"89f-5u-Eo0.title" = "GitHub for ClashX:";
+
+/* Class = "NSMenuItem"; title = "Rule"; ObjectID = "89n-bD-JHk"; */
+"89n-bD-JHk.title" = "分流 - 只有被封鎖網站走代理";
+
+/* Class = "NSMenuItem"; title = "Set as system proxy"; ObjectID = "8se-yr-wmp"; */
+"8se-yr-wmp.title" = "啟用系統代理";
+
+/* Class = "NSMenuItem"; title = "Ports"; ObjectID = "9i0-LH-x04"; */
+"9i0-LH-x04.title" = "端口狀態";
+
+/* Class = "NSTextFieldCell"; title = "https://github.com/yichengchen/clashX"; ObjectID = "9ox-Fc-Wk3"; Note = "#bc-ignore!"; */
+"9ox-Fc-Wk3.title" = "https://github.com/yichengchen/clashX";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "Start at login"; ObjectID = "B1J-XB-BiZ"; */
+"B1J-XB-BiZ.title" = "開機自動啟動";
+
+/* Class = "NSTextFieldCell"; title = "https://github.com/Dreamacro/clash"; ObjectID = "Bej-j7-KKV"; Note = "#bc-ignore!"; */
+"Bej-j7-KKV.title" = "https://github.com/Dreamacro/clash";
+
+/* Class = "NSTableColumn"; headerCell.title = "Url"; ObjectID = "C79-J5-30z"; */
+"C79-J5-30z.headerCell.title" = "訂閱連結位址";
+
+/* Class = "NSMenuItem"; title = "Benchmark"; ObjectID = "COu-UX-bww"; */
+"COu-UX-bww.title" = "測試延遲（ICMP Ping）";
+
+/* Class = "NSMenuItem"; title = "IP:"; ObjectID = "D2R-eG-cms"; Note = "#bc-ignore!"; */
+"D2R-eG-cms.title" = "IP:";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "Dd9-2F-FVY"; */
+"Dd9-2F-FVY.title" = "技術支援";
+
+/* Class = "NSMenuItem"; title = "Open local config Folder"; ObjectID = "DwE-WX-ETZ"; */
+"DwE-WX-ETZ.title" = "開啟本機配置文件夾";
+
+/* Class = "NSMenuItem"; title = "Manage"; ObjectID = "Dwg-Qb-2AU"; */
+"Dwg-Qb-2AU.title" = "編輯訂閱列表";
+
+/* Class = "NSMenuItem"; title = "Update"; ObjectID = "I2P-Wd-Ns7"; */
+"I2P-Wd-Ns7.title" = "手動更新";
+
+/* Class = "NSMenuItem"; title = "Config"; ObjectID = "JMV-Dy-CI0"; */
+"JMV-Dy-CI0.title" = "節點訂閱";
+
+/* Class = "NSMenuItem"; title = "Copy shell command"; ObjectID = "Jmb-PK-rMW"; */
+"Jmb-PK-rMW.title" = "複製終端機代理指令";
+
+/* Class = "NSTextFieldCell"; title = "ClashX"; ObjectID = "MzG-sW-3g7"; Note = "#bc-ignore!"; */
+"MzG-sW-3g7.title" = "ClashX";
+
+/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "NXU-86-Eem"; */
+"NXU-86-Eem.title" = "結束應用程式";
+
+/* Class = "NSMenu"; title = "Ports"; ObjectID = "Ng4-Ia-KSz"; Note = "#bc-ignore!"; */
+"Ng4-Ia-KSz.title" = "端口狀態";
+
+/* Class = "NSMenuItem"; title = "Direct"; ObjectID = "Np6-Pm-Lo3"; */
+"Np6-Pm-Lo3.title" = "直連 - 所有網站不走代理";
+
+/* Class = "NSMenuItem"; title = "Experimental"; ObjectID = "OLP-Uv-at6"; */
+"OLP-Uv-at6.title" = "實驗性功能";
+
+/* Class = "NSTextFieldCell"; title = "example"; ObjectID = "Osa-lp-USN"; Note = "#bc-ignore!"; */
+"Osa-lp-USN.title" = "example";
+
+/* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "OwM-mh-QMV"; Note = "#bc-ignore!"; */
+"OwM-mh-QMV.title" = "Find Previous";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "RCv-zz-HKW"; */
+"RCv-zz-HKW.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "Ruw-6m-B2m"; Note = "#bc-ignore!"; */
+"Ruw-6m-B2m.title" = "Select All";
+
+/* Class = "NSMenuItem"; title = "Jump to Selection"; ObjectID = "S0p-oC-mLd"; Note = "#bc-ignore!"; */
+"S0p-oC-mLd.title" = "Jump to Selection";
+
+/* Class = "NSMenu"; title = "API Connect Error"; ObjectID = "UU2-uE-YB4"; */
+"UU2-uE-YB4.title" = "API 連接失敗";
+
+/* Class = "NSMenuItem"; title = "socks port:"; ObjectID = "Uy1-g8-r6Q"; Note = "#bc-ignore!"; */
+"Uy1-g8-r6Q.title" = "socks port:";
+
+/* Class = "NSMenuItem"; title = "Allow connect from Lan"; ObjectID = "Vz8-7n-vx6"; */
+"Vz8-7n-vx6.title" = "開啟本地代理";
+
+/* Class = "NSMenu"; title = "Edit"; ObjectID = "W48-6f-4Dl"; Note = "#bc-ignore!"; */
+"W48-6f-4Dl.title" = "Edit";
+
+/* Class = "NSMenuItem"; title = "http port:"; ObjectID = "WNw-8Y-VFw"; Note = "#bc-ignore!"; */
+"WNw-8Y-VFw.title" = "http port:";
+
+/* Class = "NSTextFieldCell"; title = "Never"; ObjectID = "X8i-uo-gQE"; Note = "#bc-ignore!"; */
+"X8i-uo-gQE.title" = "Never";
+
+/* Class = "NSMenuItem"; title = "Dashboard"; ObjectID = "XG6-2M-PNi"; */
+"XG6-2M-PNi.title" = "主控台";
+
+/* Class = "NSMenuItem"; title = "DEBUG"; ObjectID = "XIR-Go-fWA"; */
+"XIR-Go-fWA.title" = "DEBUG";
+
+/* Class = "NSMenuItem"; title = "Find…"; ObjectID = "Xz5-n4-O0W"; Note = "#bc-ignore!"; */
+"Xz5-n4-O0W.title" = "Find…";
+
+/* Class = "NSMenuItem"; title = "Find and Replace…"; ObjectID = "YEy-JH-Tfz"; Note = "#bc-ignore!"; */
+"YEy-JH-Tfz.title" = "Find and Replace…";
+
+/* Class = "NSMenuItem"; title = "Show network indicator"; ObjectID = "YIO-Vj-64f"; */
+"YIO-Vj-64f.title" = "顯示目前代理網速";
+
+/* Class = "NSTextFieldCell"; title = "2018-08-19"; ObjectID = "aib-YP-mvk"; Note = "#bc-ignore!"; */
+/*"aib-YP-mvk.title" = "2018-08-19";
+
+/* Class = "NSMenu"; title = "Remote Config"; ObjectID = "az2-wz-yyy"; */
+"az2-wz-yyy.title" = "節點訂閱管理";
+
+/* Class = "NSMenuItem"; title = "Use Selection for Find"; ObjectID = "buJ-ug-pKt"; Note = "#bc-ignore!"; */
+"buJ-ug-pKt.title" = "Use Selection for Find";
+
+/* Class = "NSMenuItem"; title = "INFO"; ObjectID = "d8V-h0-0zF"; */
+"d8V-h0-0zF.title" = "INFO";
+
+/* Class = "NSMenuItem"; title = "Undo"; ObjectID = "dRJ-4n-Yzg"; Note = "#bc-ignore!"; */
+"dRJ-4n-Yzg.title" = "Undo";
+
+/* Class = "NSMenuItem"; title = "SILENT"; ObjectID = "dVr-Xp-C0C"; */
+"dVr-Xp-C0C.title" = "SILENT";
+
+/* Class = "NSMenuItem"; title = "Close"; ObjectID = "gOg-OG-fFX"; Note = "#bc-ignore!"; */
+"gOg-OG-fFX.title" = "Close";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "gVA-U4-sdL"; Note = "#bc-ignore!"; */
+"gVA-U4-sdL.title" = "Paste";
+
+/* Class = "NSMenuItem"; title = "Remote Config"; ObjectID = "h1C-R6-Y9w"; */
+"h1C-R6-Y9w.title" = "節點訂閱管理";
+
+/* Class = "NSMenuItem"; title = "About"; ObjectID = "hUb-k9-TEf"; */
+"hUb-k9-TEf.title" = "開發者資訊";
+
+/* Class = "NSMenuItem"; title = "api port:"; ObjectID = "hwG-qf-DeZ"; Note = "#bc-ignore!"; */
+"hwG-qf-DeZ.title" = "api port:";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "id7-f0-u56"; */
+"id7-f0-u56.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Show current proxy in menu"; ObjectID = "j9o-36-NTd"; */
+"j9o-36-NTd.title" = "Show current proxy in menu";
+
+/* Class = "NSMenuItem"; title = "API Connect Error"; ObjectID = "jGT-1M-xJu"; */
+"jGT-1M-xJu.title" = "API Connect Error";
+
+/* Class = "NSMenuItem"; title = "WARNING"; ObjectID = "ko2-Ir-DxA"; */
+"ko2-Ir-DxA.title" = "WARNING";
+
+/* Class = "NSTableColumn"; headerCell.title = "Config Name"; ObjectID = "lRE-Xa-euB"; */
+"lRE-Xa-euB.headerCell.title" = "訂閱組名稱";
+
+/* Class = "NSTextFieldCell"; title = "GitHub for Clash:"; ObjectID = "lsq-AW-K0M"; Note = "#bc-ignore!"; */
+"lsq-AW-K0M.title" = "GitHub for Clash:";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "ogW-pn-jeR"; */
+"ogW-pn-jeR.title" = "技術支援";
+
+/* Class = "NSMenuItem"; title = "Check Update"; ObjectID = "p0T-J8-Emx"; */
+"p0T-J8-Emx.title" = "檢測更新";
+
+/* Class = "NSTextFieldCell"; title = "Version:1.1.0(1.1.0)"; ObjectID = "pVE-Ti-FcK"; Note = "#bc-ignore!"; */
+"pVE-Ti-FcK.title" = "Version:1.1.0(1.1.0)";
+
+/* Class = "NSMenuItem"; title = "Delete"; ObjectID = "pa3-QI-u2k"; Note = "#bc-ignore!"; */
+"pa3-QI-u2k.title" = "刪除";
+
+/* Class = "NSMenuItem"; title = "Find Next"; ObjectID = "q09-fT-Sye"; Note = "#bc-ignore!"; */
+"q09-fT-Sye.title" = "Find Next";
+
+/* Class = "NSMenuItem"; title = "Reload config"; ObjectID = "q3G-VH-eyy"; */
+"q3G-VH-eyy.title" = "重新載入配置文件";
+
+/* Class = "NSMenuItem"; title = "Auto Update"; ObjectID = "r8s-OI-tgf"; */
+"r8s-OI-tgf.title" = "自動更新";
+
+/* Class = "NSMenuItem"; title = "Set benchmark url"; ObjectID = "rls-O1-mpQ"; */
+"rls-O1-mpQ.title" = "指定測速網址";
+
+/* Class = "NSMenu"; title = "Experimental"; ObjectID = "sbS-Fj-gxn"; */
+"sbS-Fj-gxn.title" = "實驗性功能";
+
+/* Class = "NSTextFieldCell"; title = "Configs"; ObjectID = "tL1-bl-LXd"; */
+"tL1-bl-LXd.title" = "節點訂閱配置文件列表";
+
+/* Class = "NSMenu"; title = "Config"; ObjectID = "tck-zU-JKQ"; */
+"tck-zU-JKQ.title" = "節點訂閱管理";
+
+/* Class = "NSMenu"; title = "ClashX"; ObjectID = "uQy-DD-JDr"; Note = "#bc-ignore!"; */
+"uQy-DD-JDr.title" = "ClashX";
+
+/* Class = "NSMenuItem"; title = "Cut"; ObjectID = "uRl-iY-unG"; Note = "#bc-ignore!"; */
+"uRl-iY-unG.title" = "Cut";
+
+/* Class = "NSMenu"; title = "Log level"; ObjectID = "wqo-3T-4qO"; */
+"wqo-3T-4qO.title" = "日誌等級";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "x3v-GG-iWU"; Note = "#bc-ignore!"; */
+"x3v-GG-iWU.title" = "Copy";
+
+/* Class = "NSMenuItem"; title = "Use built in api"; ObjectID = "xG5-B4-mlw"; */
+"xG5-B4-mlw.title" = "使用内置 API 接口";
+
+/* Class = "NSTableColumn"; headerCell.title = "Update Time"; ObjectID = "xoc-hs-9qa"; */
+"xoc-hs-9qa.headerCell.title" = "最近更新時間";
+
+/* Class = "NSMenuItem"; title = "Show Log"; ObjectID = "xxZ-9l-69m"; */
+"xxZ-9l-69m.title" = "瀏覽連線日誌";
+
+/* Class = "NSButtonCell"; title = "Delete"; ObjectID = "yGD-AG-oYU"; */
+"yGD-AG-oYU.title" = "刪除";
+
+/* Class = "NSMenuItem"; title = "Global"; ObjectID = "yiM-U4-MNg"; */
+"yiM-U4-MNg.title" = "全局 - 所有網站走代理";
+
+/* Class = "NSTextFieldCell"; title = "https://example.com"; ObjectID = "zX2-Xa-6wt"; Note = "#bc-ignore!"; */
+"zX2-Xa-6wt.title" = "https://example.com";
+
+/* Class = "NSTextFieldCell"; title = "Core Version"; ObjectID = "zwo-q5-k5N"; */
+"zwo-q5-k5N.title" = "Core Version";
