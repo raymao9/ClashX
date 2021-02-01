@@ -26,7 +26,7 @@ class AboutViewController: NSViewController {
     }()
 
     lazy var buildTime: String = {
-        return Bundle.main.infoDictionary?["buildTime"] as? String ?? "Modified by Raymao9 (2021-01-19)"
+        return Bundle.main.infoDictionary?["buildTime"] as? String ?? "Modified by Raymao9 (2021-02-01)"
     }()
 
     override func viewDidLoad() {

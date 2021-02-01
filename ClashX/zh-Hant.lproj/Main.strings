@@ -186,10 +186,10 @@
 "id7-f0-u56.title" = "Text Cell";
 
 /* Class = "NSMenuItem"; title = "Show current proxy in menu"; ObjectID = "j9o-36-NTd"; */
-"j9o-36-NTd.title" = "Show current proxy in menu";
+"j9o-36-NTd.title" = "主選單顯示當前連線策略（重啟生效）";
 
 /* Class = "NSMenuItem"; title = "API Connect Error"; ObjectID = "jGT-1M-xJu"; */
-"jGT-1M-xJu.title" = "API Connect Error";
+"jGT-1M-xJu.title" = "API 通訊失敗";
 
 /* Class = "NSMenuItem"; title = "WARNING"; ObjectID = "ko2-Ir-DxA"; */
 "ko2-Ir-DxA.title" = "WARNING";

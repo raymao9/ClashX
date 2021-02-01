@@ -69,7 +69,7 @@
 "id7-f0-u56.title" = "Text Cell";
 
 /* Class = "NSMenuItem"; title = "Show current proxy in menu"; ObjectID = "j9o-36-NTd"; */
-"j9o-36-NTd.title" = "快捷展示策略组策略";
+"j9o-36-NTd.title" = "快捷展示策略组策略（重启生效）";
 
 /* Class = "NSMenuItem"; title = "API Connect Error"; ObjectID = "jGT-1M-xJu"; */
 "jGT-1M-xJu.title" = "API 连接失败";

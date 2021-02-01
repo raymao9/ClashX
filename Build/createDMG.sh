@@ -3,13 +3,13 @@
 
 APP_NAME="ClashX"
 INFOPLIST_FILE="Info.plist"
-BASE_DIR=/Users/nanamao/${APP_NAME}_1.20.4
+BASE_DIR=/Users/nanamao/${APP_NAME}
 BUILD_DIR=${BASE_DIR}/Build
 APP_DEBUG_DIR=${BUILD_DIR}/Products/Debug
 APP_ARCHIVE=${BUILD_DIR}/${APP_NAME}.xcarchive
 APP_RELEASE=${BUILD_DIR}/release
 APP_Version=$(sed -n '/MARKETING_VERSION/{s/MARKETING_VERSION = //;s/;//;s/^[[:space:]]*//;p;q;}' ../${APP_NAME}.xcodeproj/project.pbxproj)
-DMG_FINAL="${APP_NAME}.dmg"
+DMG_FINAL="${APP_NAME}_v${APP_Version}.dmg"
 APP_TITLE="${APP_NAME}_${APP_Version}"
 
 function createFolder() {
