@@ -63,7 +63,7 @@
 "C79-J5-30z.headerCell.title" = "訂閱連結位址";
 
 /* Class = "NSMenuItem"; title = "Benchmark"; ObjectID = "COu-UX-bww"; */
-"COu-UX-bww.title" = "測試延遲（ICMP Ping）";
+"COu-UX-bww.title" = "延遲測試（ICMP Ping）";
 
 /* Class = "NSMenuItem"; title = "IP:"; ObjectID = "D2R-eG-cms"; Note = "#bc-ignore!"; */
 "D2R-eG-cms.title" = "IP:";

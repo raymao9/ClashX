@@ -3,7 +3,7 @@
 
 APP_NAME="ClashX"
 INFOPLIST_FILE="Info.plist"
-BASE_DIR=/Users/nanamao/${APP_NAME}
+BASE_DIR=/Users/nanamao/Projects/${APP_NAME}
 BUILD_DIR=${BASE_DIR}/Build
 APP_DEBUG_DIR=${BUILD_DIR}/Products/Debug
 APP_ARCHIVE=${BUILD_DIR}/${APP_NAME}.xcarchive

@@ -9,10 +9,10 @@
 "Auto Close Connection" = "切換代理時自動中斷連接";
 
 /* No comment provided by engineer. */
-"Benchmark" = "測速";
+"Benchmark" = "延遲測試（ICMP Ping）";
 
 /* No comment provided by engineer. */
-"Benchmark Finished!" = "測速完成！";
+"Benchmark Finished!" = "延遲測試完成！";
 
 /* No comment provided by engineer. */
 "Benchmark has begun, please wait." = "正在啟動全節點延遲測試，請稍等";
@@ -26,7 +26,7 @@
 /* No comment provided by engineer. */
 "ClashX fail to create ~/.config/clash folder. Please check privileges or manually create folder and restart ClashX." = "無法創建 ~/.config/clash 目錄，請確認已開啟相應權限或手動新建該目錄後重啟 ClashX";
 
-/* No comment provided by engineer. */
+/* No ent provided by engineer. */
 "ClashX needs to install/update a helper tool with administrator privileges to set system proxy quickly.If not helper tool installed, ClashX won't be able to set your system proxy" = "ClashX 需要額外安裝附加套件（需要系統權限）以便快速設定您的系統代理，如未安裝附加套件，ClashX 將無法更改您的系統代理設定。";
 
 /* No comment provided by engineer. */
@@ -111,7 +111,7 @@
 "Remote Config Update Fail" = "更新訂閱失敗！";
 
 /* No comment provided by engineer. */
-"ReTest" = "重新測速";
+"ReTest" = "重新測試";
 
 /* No comment provided by engineer. */
 "Rule" = "分流";
@@ -138,7 +138,7 @@
 "Tap to reload config" = "輕觸一下來重載配置文件";
 
 /* No comment provided by engineer. */
-"Testing" = "正在測速...";
+"Testing" = "正在測試...";
 
 /* No comment provided by engineer. */
 "The remote config name is duplicated" = "訂閱配置文件名稱重複了";
