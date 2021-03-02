@@ -9,7 +9,7 @@
 "Auto Close Connection" = "切换代理时中断连接";
 
 /* No comment provided by engineer. */
-"Benchmark" = "延迟测速";
+"Benchmark" = "延迟测速（ICMP Ping）";
 
 /* No comment provided by engineer. */
 "Benchmark Finished!" = "延迟测速完成";

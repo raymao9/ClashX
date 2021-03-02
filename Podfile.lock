@@ -1,23 +1,23 @@
 PODS:
-  - Alamofire (5.2.1)
-  - AppCenter/Analytics (3.2.0):
+  - Alamofire (5.4.1)
+  - AppCenter/Analytics (4.1.0):
     - AppCenter/Core
-  - AppCenter/Core (3.2.0)
-  - CocoaLumberjack/Core (3.6.1)
-  - CocoaLumberjack/Swift (3.6.1):
+  - AppCenter/Core (4.1.0)
+  - CocoaLumberjack/Core (3.7.0)
+  - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
   - Crashlytics (3.14.0):
     - Fabric (~> 1.10.2)
   - Fabric (1.10.2)
   - FlexibleDiff (0.0.8)
-  - LetsMove (1.24)
-  - RxCocoa (5.1.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxRelay (5.1.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.1.1)
-  - Sparkle (1.23.0)
+  - LetsMove (1.25)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+  - Sparkle (1.26.0)
   - Starscream (3.1.1)
   - SwiftyJSON (5.0.0)
   - WebViewJavascriptBridge (6.0.3)
@@ -54,17 +54,17 @@ SPEC REPOS:
     - WebViewJavascriptBridge
 
 SPEC CHECKSUMS:
-  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
-  AppCenter: ca66175050d538b157959382dd43f1ab96cdab84
-  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  AppCenter: 8832b158d17e54845c3b88a91076218f0b07174d
+  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   Crashlytics: 9220f5bc89e7a618df411b4f639389dbfb0e03d2
   Fabric: ea977e3cd9c20425516d3dafd3bf8c941c51223f
   FlexibleDiff: 4f487778bd152088a9528a0a9be06eba7952bb00
-  LetsMove: fefe56bc7bc7fb7d37049e28a14f297961229fc5
-  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
-  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  Sparkle: 55b1a87ba69d56913375a281546b7c82dec95bb0
+  LetsMove: 7b9fe44737707d984fbd3f47af46609a9a07b461
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  Sparkle: d56d028f4b0c123577825f5d1004f6140d77f90e
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
