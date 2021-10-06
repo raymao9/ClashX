@@ -3,7 +3,10 @@ package main
 import (
 	"C"
 	"encoding/json"
+	"fmt"
+	"io/ioutil"
 	"net"
+	"os"
 	"path/filepath"
 	"strconv"
 	"strings"
@@ -23,7 +26,7 @@ func isAddrValid(addr string) bool {
 		v := comps[len(comps)-1]
 		if port, err := strconv.Atoi(v); err == nil {
 			if port > 0 && port < 65535 {
-				return true
+				return checkPortAvailable(port)
 			}
 		}
 	}
@@ -37,9 +40,19 @@ func checkPortAvailable(port int) bool {
 	addr := ":"
 	l, err := net.Listen("tcp", addr+strconv.Itoa(port))
 	if err != nil {
+		log.Warnln("check port fail 0.0.0.0:%d", port)
 		return false
 	}
 	_ = l.Close()
+
+	addr = "127.0.0.1:"
+	l, err = net.Listen("tcp", addr+strconv.Itoa(port))
+	if err != nil {
+		log.Warnln("check port fail 127.0.0.1:%d", port)
+		return false
+	}
+	_ = l.Close()
+	log.Infoln("check port %d success", port)
 	return true
 }
 
@@ -49,37 +62,78 @@ func initClashCore() {
 	constant.SetConfig(configFile)
 }
 
-func parseDefaultConfigThenStart(checkPort, allowLan bool) (*config.Config, error) {
-	cfg, err := executor.Parse()
+func readConfig(path string) ([]byte, error) {
+	if _, err := os.Stat(path); os.IsNotExist(err) {
+		return nil, err
+	}
+	data, err := ioutil.ReadFile(path)
 	if err != nil {
 		return nil, err
 	}
+	if len(data) == 0 {
+		return nil, fmt.Errorf("Configuration file %s is empty", path)
+	}
+	return data, err
+}
+
+
+func parseDefaultConfigThenStart(checkPort, allowLan bool) (*config.Config, error) {
+	buf, err := readConfig(constant.Path.Config())
+	if err != nil {
+		return nil, err
+	}
+
+	rawCfg, err := config.UnmarshalRawConfig(buf)
+	if err != nil {
+		return nil, err
+	}
+
+	if rawCfg.MixedPort == 0 {
+		if rawCfg.Port > 0 {
+			rawCfg.MixedPort = rawCfg.Port
+			rawCfg.Port = 0
+		} else if rawCfg.SocksPort > 0 {
+			rawCfg.MixedPort = rawCfg.SocksPort
+			rawCfg.SocksPort = 0
+		} else {
+			rawCfg.MixedPort = 7890
+		}
+
+		if rawCfg.SocksPort == rawCfg.MixedPort {
+			rawCfg.SocksPort = 0
+		}
+
+		if rawCfg.Port == rawCfg.MixedPort {
+			rawCfg.Port = 0
+		}
+
+	}
+
+	rawCfg.ExternalUI = ""
+	rawCfg.Profile.StoreSelected = false
 	if checkPort {
-		if !isAddrValid(cfg.General.ExternalController) {
+		if !isAddrValid(rawCfg.ExternalController) {
 			port, err := freeport.GetFreePort()
 			if err != nil {
 				return nil, err
 			}
-			cfg.General.ExternalController = "127.0.0.1:" + strconv.Itoa(port)
-			cfg.General.Secret = ""
+			rawCfg.ExternalController = "127.0.0.1:" + strconv.Itoa(port)
+			rawCfg.Secret = ""
 		}
-		cfg.General.AllowLan = allowLan
-	}
+		rawCfg.AllowLan = allowLan
 
-	if !checkPortAvailable(cfg.General.Port) {
-		if port, err := freeport.GetFreePort(); err == nil {
-			cfg.General.Port = port
-		}
-	}
-
-	if !checkPortAvailable(cfg.General.SocksPort) {
-		if port, err := freeport.GetFreePort(); err == nil {
-			cfg.General.SocksPort = port
+		if !checkPortAvailable(rawCfg.MixedPort) {
+			if port, err := freeport.GetFreePort(); err == nil {
+				rawCfg.MixedPort = port
+			}
 		}
 	}
 
+	cfg, err := config.ParseRawConfig(rawCfg)
+	if err != nil {
+		return nil, err
+	}
 	go route.Start(cfg.General.ExternalController, cfg.General.Secret)
-
 	executor.ApplyConfig(cfg, true)
 	return cfg, nil
 }
@@ -101,7 +155,7 @@ func verifyClashConfig(content *C.char) *C.char {
 
 //export run
 func run(checkConfig, allowLan bool) *C.char {
-	cfg, err := parseDefaultConfigThenStart(checkConfig,allowLan)
+	cfg, err := parseDefaultConfigThenStart(checkConfig, allowLan)
 	if err != nil {
 		return C.CString(err.Error())
 	}

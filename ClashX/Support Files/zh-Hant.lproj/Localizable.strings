@@ -3,6 +3,9 @@
 "Add a remote config" = "新增訂閱";
 
 /* No comment provided by engineer. */
+"Add a remote control config" = "新增遠端控制";
+
+/* No comment provided by engineer. */
 "Apply and Quit" = "套用並關閉";
 
 /* No comment provided by engineer. */
@@ -27,28 +30,31 @@
 "ClashX fail to create ~/.config/clash folder. Please check privileges or manually create folder and restart ClashX." = "無法創建 ~/.config/clash 目錄，請確認已開啟相應權限或手動新建該目錄後重啟 ClashX";
 
 /* No ent provided by engineer. */
-"ClashX needs to install/update a helper tool with administrator privileges to set system proxy quickly.If not helper tool installed, ClashX won't be able to set your system proxy" = "ClashX 需要額外安裝附加套件（需要系統權限）以便快速設定您的系統代理，如未安裝附加套件，ClashX 將無法更改您的系統代理設定。";
+"ClashX needs to install/update a helper tool with administrator privileges, otherwise ClashX won't be able to configure system proxy." = "ClashX 需要額外安裝附加套件（需要系統權限）以便接管您的網路代理，如未安裝附加套件，ClashX 將無法作用。";
 
 /* No comment provided by engineer. */
 "ClashX Start Error!" = "ClashX 啟動失敗！";
 
 /* No comment provided by engineer. */
-"Config file have been changed" = "配置文件已更改";
+"Config file have been changed" = "設定檔已變更";
 
 /* No comment provided by engineer. */
-"Config loading Fail!" = "配置文件載入失敗！";
+"Config loading Fail!" = "設定檔載入失敗！";
 
 /* No comment provided by engineer. */
 "Direct" = "直連";
 
 /* No comment provided by engineer. */
-"Disable Restore Proxy Setting" = "關閉 ClashX 自動還原系統代理";
+"Details" = "瞭解詳情";
+
+/* No comment provided by engineer. */
+"Disable Restore Proxy Setting" = "關閉 ClashX 即自動還原網路狀態";
 
 /* No comment provided by engineer. */
 "Download fail" = "下載失敗！";
 
 /* No comment provided by engineer. */
-"Enhance proxy list render" = "優化節點列表顯示";
+"Enhance proxy list render" = "最佳化節點列表顯示";
 
 /* No comment provided by engineer. */
 "fail" = "失敗";
@@ -72,6 +78,9 @@
 "Need to Restart the ClashX to Take effect, Please start clashX manually" = "重啟後才會生效，請手動重啟 ClashX";
 
 /* No comment provided by engineer. */
+"Legacy Install" = "傳統方式安裝";
+
+/* No comment provided by engineer. */
 "Never" = "從未";
 
 /* No comment provided by engineer. */
@@ -81,7 +90,7 @@
 "Ports Open Fail, Please try to restart ClashX" = "端口啟動失敗，請重啟 ClashX（或重啟電腦）";
 
 /* No comment provided by engineer. */
-"Edit Config" = "編輯基本配置文件";
+"Edit Config" = "編輯基本設定檔";
 
 /* No comment provided by engineer. */
 "Prelease" = "預發佈版本";
@@ -90,19 +99,19 @@
 "Proxy Mode" = "路由模式";
 
 /* No comment provided by engineer. */
-"Proxy settings are changed by another process. ClashX is no longer the default system proxy." = "Proxy settings are changed by another process. ClashX is no longer the default system proxy.";
+"Proxy settings are changed by another process. ClashX is no longer the default system proxy." = "您的網路代理已被其他程式接管（也許您開啟了其他 VPN），ClashX 的代理已暫停。";
 
 /* No comment provided by engineer. */
 "Quit" = "結束應用程式";
 
 /* No comment provided by engineer. */
-"Reload Config Fail" = "重載配置文件失敗！";
+"Reload Config Fail" = "重載設定檔失敗！";
 
 /* No comment provided by engineer. */
-"Reload Config Succeed" = "重載配置文件成功！";
+"Reload Config Succeed" = "重載設定檔成功！";
 
 /* No comment provided by engineer. */
-"Remote Config Format Error" = "節點訂閱配置格式錯誤！";
+"Remote Config Format Error" = "節點訂閱格式錯誤！";
 
 /* No comment provided by engineer. */
 "Remote Config Update" = "更新訂閱";
@@ -132,16 +141,19 @@
 "Success!" = "成功！";
 
 /* No comment provided by engineer. */
-"System Proxy Changed" = "系統代理設定已被其他程式更改";
+"System Proxy Changed" = "網路代理已被其他程式接管";
 
 /* No comment provided by engineer. */
-"Tap to reload config" = "輕觸一下來重載配置文件";
+"Tap to reload config" = "點按一下來重載設定檔";
 
 /* No comment provided by engineer. */
 "Testing" = "正在測試...";
 
 /* No comment provided by engineer. */
-"The remote config name is duplicated" = "訂閱配置文件名稱重複了";
+"The remote config name is duplicated" = "訂閱名稱重複了";
+
+/* No comment provided by engineer. */
+"This version of ClashX contains a break change due to clash core 1.0 released. Check if your config is not working properly." = "由於 Clash 核心已更新到 1.0 版本，使用此版本的 ClashX 可能需要更新設定檔。";
 
 /* No comment provided by engineer. */
 "Update GEOIP Database" = "更新 GeoIP 資料庫";
@@ -159,4 +171,4 @@
 "Use iCloud" = "使用 iCloud";
 
 /* No comment provided by engineer. */
-"Use reload config to try reconnect." = "透過重載配置文件嘗試重啟連接";
+"Use reload config to try reconnect." = "透過重載設定檔嘗試重新連接";

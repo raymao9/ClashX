@@ -3,6 +3,9 @@
 "Add a remote config" = "添加托管配置文件";
 
 /* No comment provided by engineer. */
+"Add a remote control config" = "添加远程控制器配置";
+
+/* No comment provided by engineer. */
 "Apply and Quit" = "应用并退出";
 
 /* No comment provided by engineer. */
@@ -27,7 +30,7 @@
 "ClashX fail to create ~/.config/clash folder. Please check privileges or manually create folder and restart ClashX." = "ClashX 创建 ~/.config/clash 文件夹失败，请检查权限设置或者手动创建文件夹后重启 ClashX";
 
 /* No comment provided by engineer. */
-"ClashX needs to install/update a helper tool with administrator privileges to set system proxy quickly.If not helper tool installed, ClashX won't be able to set your system proxy" = "ClashX 需要使用管理员权限安装一个帮助程序来帮助设置系统代理。如不安装，ClashX 的设置系统代理功能将失效。";
+"ClashX needs to install/update a helper tool with administrator privileges, otherwise ClashX won't be able to configure system proxy." = "ClashX 需要使用管理员权限安装一个帮助程序来帮助设置系统代理。如不安装，ClashX 的设置系统代理功能将失效。";
 
 /* No comment provided by engineer. */
 "ClashX Start Error!" = "ClashX 启动出错";
@@ -37,6 +40,12 @@
 
 /* No comment provided by engineer. */
 "Config loading Fail!" = "配置文件加载失败";
+
+/* No comment provided by engineer. */
+"Custom your GEOIP MMDB download address." = "自定义下载地址";
+
+/* No comment provided by engineer. */
+"Details" = "查看详情";
 
 /* No comment provided by engineer. */
 "Direct" = "直连";
@@ -66,7 +75,10 @@
 "Invalid input" = "输入不合法";
 
 /* No comment provided by engineer. */
-"Lecgy Install" = "传统安装";
+"Legacy Install" = "传统安装";
+
+/* No comment provided by engineer. */
+"Load Balance" = "负载均衡";
 
 /* No comment provided by engineer. */
 "Need to Restart the ClashX to Take effect, Please start clashX manually" = "重启软件后生效，请手动重启 ClashX";
@@ -79,9 +91,6 @@
 
 /* No comment provided by engineer. */
 "Ports Open Fail, Please try to restart ClashX" = "端口打开失败，请尝试重启 ClashX（或重启电脑）";
-
-/* No comment provided by engineer. */
-"Edit Config" = "编辑基础配置文件";
 
 /* No comment provided by engineer. */
 "Prelease" = "Prelease";
@@ -132,7 +141,7 @@
 "Success!" = "成功！";
 
 /* No comment provided by engineer. */
-"System Proxy Changed" = "系统代理设置已被其他应用更改";
+"System Proxy Changed" = "系统代理设置已修改";
 
 /* No comment provided by engineer. */
 "Tap to reload config" = "点击重载配置文件";
@@ -142,6 +151,9 @@
 
 /* No comment provided by engineer. */
 "The remote config name is duplicated" = "托管配置文件名称重复";
+
+/* No comment provided by engineer. */
+"This version of ClashX contains a break change due to clash core 1.0 released. Check if your config is not working properly." = "由于 Clash Core 发布 1.0 版本，使用此版本的 ClashX 可能需要更新配置内容";
 
 /* No comment provided by engineer. */
 "Update GEOIP Database" = "更新 IP 数据库";

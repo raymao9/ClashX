@@ -1,33 +1,31 @@
 PODS:
-  - Alamofire (5.4.1)
-  - AppCenter/Analytics (4.1.0):
+  - Alamofire (5.4.3)
+  - AppCenter/Analytics (4.2.0):
     - AppCenter/Core
-  - AppCenter/Core (4.1.0)
-  - CocoaLumberjack/Core (3.7.0)
-  - CocoaLumberjack/Swift (3.7.0):
+  - AppCenter/Core (4.2.0)
+  - CocoaLumberjack/Core (3.7.2)
+  - CocoaLumberjack/Swift (3.7.2):
     - CocoaLumberjack/Core
-  - Crashlytics (3.14.0):
-    - Fabric (~> 1.10.2)
-  - Fabric (1.10.2)
-  - FlexibleDiff (0.0.8)
+  - FlexibleDiff (0.0.9)
+  - GzipSwift (5.1.1)
   - LetsMove (1.25)
-  - RxCocoa (6.1.0):
-    - RxRelay (= 6.1.0)
-    - RxSwift (= 6.1.0)
-  - RxRelay (6.1.0):
-    - RxSwift (= 6.1.0)
-  - RxSwift (6.1.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
   - Sparkle (1.26.0)
   - Starscream (3.1.1)
-  - SwiftyJSON (5.0.0)
+  - SwiftyJSON (5.0.1)
   - WebViewJavascriptBridge (6.0.3)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
   - AppCenter/Analytics
   - CocoaLumberjack/Swift
-  - Crashlytics
   - FlexibleDiff
+  - GzipSwift
   - LetsMove
   - RxCocoa
   - RxSwift
@@ -41,9 +39,8 @@ SPEC REPOS:
     - Alamofire
     - AppCenter
     - CocoaLumberjack
-    - Crashlytics
-    - Fabric
     - FlexibleDiff
+    - GzipSwift
     - LetsMove
     - RxCocoa
     - RxRelay
@@ -54,21 +51,20 @@ SPEC REPOS:
     - WebViewJavascriptBridge
 
 SPEC CHECKSUMS:
-  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  AppCenter: 8832b158d17e54845c3b88a91076218f0b07174d
-  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
-  Crashlytics: 9220f5bc89e7a618df411b4f639389dbfb0e03d2
-  Fabric: ea977e3cd9c20425516d3dafd3bf8c941c51223f
-  FlexibleDiff: 4f487778bd152088a9528a0a9be06eba7952bb00
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  AppCenter: 87ef6eefd8ade4df59e88951288587429f3dd2a5
+  CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
+  FlexibleDiff: b9ee9b8305b42c784f5dd40589203c97c55bbaa0
+  GzipSwift: 893f3e48e597a1a4f62fafcb6514220fcf8287fa
   LetsMove: 7b9fe44737707d984fbd3f47af46609a9a07b461
-  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
-  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
-  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   Sparkle: d56d028f4b0c123577825f5d1004f6140d77f90e
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
 
-PODFILE CHECKSUM: d3f4f5683423e593e4fca7cc5adb1846dfe66b1a
+PODFILE CHECKSUM: 936b952dde2cf453379d56bfe0bf53f793449956
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.11.0

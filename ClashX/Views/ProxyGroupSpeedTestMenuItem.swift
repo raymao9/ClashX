@@ -44,6 +44,18 @@ class ProxyGroupSpeedTestMenuItem: NSMenuItem {
     @objc func healthCheck() {
         guard testType == .reTest else { return }
         ApiRequest.healthCheck(proxy: proxyGroup.name)
+        ApiRequest.getMergedProxyData { [weak self] proxyResp in
+            guard let self = self else { return }
+            var providers = Set<ClashProxyName>()
+            self.proxyGroup.all?.compactMap{
+                proxyResp?.proxiesMap[$0]?.enclosingProvider?.name
+            }.forEach{
+                providers.insert($0)
+            }
+            providers.forEach{
+                ApiRequest.healthCheck(proxy: $0)
+            }
+        }
         menu?.cancelTracking()
     }
 }
@@ -111,22 +123,26 @@ fileprivate class ProxyGroupSpeedTestMenuItemView: MenuItemBaseView {
             }
         }
 
-        if providers.count > 0 {
-            for provider in providers {
-                ApiRequest.healthCheck(proxy: provider)
-            }
-            enclosingMenuItem?.menu?.cancelTracking()
+        label.stringValue = NSLocalizedString("Testing", comment: "")
+        enclosingMenuItem?.isEnabled = false
+        setNeedsDisplay()
 
-        } else {
-            label.stringValue = NSLocalizedString("Testing", comment: "")
-            enclosingMenuItem?.isEnabled = false
-            setNeedsDisplay()
-            testGroup.notify(queue: .main) {
-                [weak self] in
-                guard let self = self, let menu = self.enclosingMenuItem else { return }
-                self.label.stringValue = menu.title
-                menu.isEnabled = true
-                self.setNeedsDisplay()
+        for provider in providers {
+            testGroup.enter()
+
+            ApiRequest.healthCheck(proxy: provider) {
+                testGroup.leave()
+            }
+        }
+
+        testGroup.notify(queue: .main) {
+            [weak self] in
+            guard let self = self, let menu = self.enclosingMenuItem else { return }
+            self.label.stringValue = menu.title
+            menu.isEnabled = true
+            self.setNeedsDisplay()
+            if providers.count > 0 {
+                MenuItemFactory.refreshExistingMenuItems()
             }
         }
     }

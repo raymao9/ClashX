@@ -26,7 +26,7 @@ class AboutViewController: NSViewController {
     }()
 
     lazy var buildTime: String = {
-        return Bundle.main.infoDictionary?["buildTime"] as? String ?? "Modified by Raymao9 (2021-02-01)"
+        return Bundle.main.infoDictionary?["buildTime"] as? String ?? "Modified by Raymao9 (2021-10-06)"
     }()
 
     override func viewDidLoad() {
@@ -39,7 +39,7 @@ class AboutViewController: NSViewController {
 
         versionLabel.stringValue = "Version: \(version) (\(build))\(isBeta)"
         coreVersionLabel.stringValue = clashCoreVersion
-        buildTimeLabel.stringValue = "\(commit) \(branch) \(buildTime)"
+        buildTimeLabel.stringValue = "\(commit)-\(branch) \(buildTime)"
     }
 
     override func viewWillAppear() {

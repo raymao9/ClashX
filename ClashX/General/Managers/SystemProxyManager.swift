@@ -46,9 +46,9 @@ class SystemProxyManager: NSObject {
     }
 
     func enableProxy() {
-        let port = ConfigManager.shared.currentConfig?.port ?? 0
-        let socketPort = ConfigManager.shared.currentConfig?.socketPort ?? 0
-        SystemProxyManager.shared.enableProxy(port: port, socksPort: socketPort)
+        let port = ConfigManager.shared.currentConfig?.usedHttpPort ?? 0
+        let socketPort = ConfigManager.shared.currentConfig?.usedSocksPort ?? 0
+        enableProxy(port: port, socksPort: socketPort)
     }
 
     func enableProxy(port: Int, socksPort: Int) {
@@ -57,24 +57,28 @@ class SystemProxyManager: NSObject {
             return
         }
         Logger.log("enableProxy", level: .debug)
-        helper?.enableProxy(withPort: Int32(port), socksPort: Int32(socksPort), error: { error in
+        helper?.enableProxy(withPort: Int32(port),
+                            socksPort: Int32(socksPort),
+                            pac: nil,
+                            filterInterface: Settings.filterInterface,
+                            error: { error in
             if let error = error {
                 Logger.log("enableProxy \(error)", level: .error)
             }
         })
     }
 
-    func disableProxy() {
-        let port = ConfigManager.shared.currentConfig?.port ?? 0
-        let socketPort = ConfigManager.shared.currentConfig?.socketPort ?? 0
-        SystemProxyManager.shared.disableProxy(port: port, socksPort: socketPort)
+    func disableProxy(forceDisable: Bool = false, complete: (() -> Void)? = nil) {
+        let port = ConfigManager.shared.currentConfig?.usedHttpPort ?? 0
+        let socketPort = ConfigManager.shared.currentConfig?.usedSocksPort ?? 0
+        SystemProxyManager.shared.disableProxy(port: port, socksPort: socketPort, forceDisable: forceDisable, complete: complete)
     }
 
     func disableProxy(port: Int, socksPort: Int, forceDisable: Bool = false, complete: (() -> Void)? = nil) {
         Logger.log("disableProxy", level: .debug)
 
         if disableRestoreProxy || forceDisable {
-            helper?.disableProxy { error in
+            helper?.disableProxy(withFilterInterface: Settings.filterInterface) { error in
                 if let error = error {
                     Logger.log("disableProxy \(error)", level: .error)
                 }
@@ -83,7 +87,7 @@ class SystemProxyManager: NSObject {
             return
         }
 
-        helper?.restoreProxy(withCurrentPort: Int32(port), socksPort: Int32(socksPort), info: savedProxyInfo, error: { error in
+        helper?.restoreProxy(withCurrentPort: Int32(port), socksPort: Int32(socksPort), info: savedProxyInfo, filterInterface: Settings.filterInterface, error: { error in
             if let error = error {
                 Logger.log("restoreProxy \(error)", level: .error)
             }

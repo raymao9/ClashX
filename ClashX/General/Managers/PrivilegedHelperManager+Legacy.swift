@@ -23,8 +23,10 @@ extension PrivilegedHelperManager {
         fi
         launchctl remove \(PrivilegedHelperManager.machServiceName) || true
         
+        mkdir -p /Library/PrivilegedHelperTools/
         rm -f /Library/PrivilegedHelperTools/\(PrivilegedHelperManager.machServiceName)
-        cp \(appPath)/Contents/Library/LaunchServices/\(PrivilegedHelperManager.machServiceName) /Library/PrivilegedHelperTools/\(PrivilegedHelperManager.machServiceName)
+        
+        cp "\(appPath)/Contents/Library/LaunchServices/\(PrivilegedHelperManager.machServiceName)" "/Library/PrivilegedHelperTools/\(PrivilegedHelperManager.machServiceName)"
 
         echo '
         <?xml version="1.0" encoding="UTF-8"?>
@@ -56,6 +58,7 @@ extension PrivilegedHelperManager {
     func legacyInstallHelper() {
         defer {
             resetConnection()
+            Thread.sleep(forTimeInterval: 1)
         }
         let script = getInstallScript()
         let tmpPath = FileManager.default.temporaryDirectory.appendingPathComponent(NSUUID().uuidString).appendingPathExtension("sh")
@@ -72,5 +75,6 @@ extension PrivilegedHelperManager {
         } catch let err {
             Logger.log("legacyInstallHelper create script fail: \(err)")
         }
+        try? FileManager.default.removeItem(at: tmpPath)
     }
 }

@@ -32,16 +32,20 @@ class AutoUpgardeManager: NSObject {
         }
         return items
     }()
+    
+    private var allowSelectChannel:Bool {
+        return Bundle.main.object(forInfoDictionaryKey: "SUDisallowSelectChannel") as? Bool != true
+    }
 
     // MARK: Public
 
     func setup() {
-        guard WebPortalManager.hasWebProtal == false else { return }
+        guard WebPortalManager.hasWebProtal == false, allowSelectChannel else { return }
         SUUpdater.shared()?.delegate = self
     }
 
     func addChanelMenuItem(_ menu: inout NSMenu) {
-        guard WebPortalManager.hasWebProtal == false else { return }
+        guard WebPortalManager.hasWebProtal == false, allowSelectChannel else { return }
         let upgradeMenu = NSMenu(title: NSLocalizedString("Upgrade Channel", comment: ""))
         for (_, item) in menuItems {
             upgradeMenu.addItem(item)
@@ -105,7 +109,7 @@ extension AutoUpgardeManager.Channel {
         case .stable:
             return "https://gitee.com/raymao9/appcast_clashx/raw/master/appcast.xml"
         case .prelease:
-            return "https://gitee.com/raymao9/appcast_clashx/raw/master/appcast_pre.xml"
+            return "https://gitee.com/raymao9/appcast_clashx/raw/master/appcast.xml"
         case .appcenter:
             return "https://gitee.com/raymao9/appcast_clashx/raw/master/appcast.xml"
         }

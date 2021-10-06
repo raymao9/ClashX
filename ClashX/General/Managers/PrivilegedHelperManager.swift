@@ -8,10 +8,13 @@
 
 import AppKit
 import ServiceManagement
+import RxSwift
+import RxCocoa
 
 class PrivilegedHelperManager {
+    let isHelperCheckFinished = BehaviorRelay<Bool>(value: false)
     private var cancelInstallCheck = false
-    private var useLecgyInstall = false
+    private var useLegacyInstall = false
 
     private var authRef: AuthorizationRef?
     private var connection: NSXPCConnection?
@@ -20,7 +23,6 @@ class PrivilegedHelperManager {
 
     static let shared = PrivilegedHelperManager()
     init() {
-//        super.init()
         initAuthorizationRef()
     }
 
@@ -28,14 +30,20 @@ class PrivilegedHelperManager {
 
     func checkInstall() {
         Logger.log("checkInstall", level: .debug)
-        while !cancelInstallCheck && !helperStatus() {
-            Logger.log("need to install helper", level: .debug)
-            if Thread.isMainThread {
-                notifyInstall()
-            } else {
-                DispatchQueue.main.async {
+        
+        getHelperStatus { [weak self] installed in
+            guard let self = self else {return}
+            if !installed {
+                Logger.log("need to install helper", level: .debug)
+                if Thread.isMainThread {
                     self.notifyInstall()
+                } else {
+                    DispatchQueue.main.async {
+                        self.notifyInstall()
+                    }
                 }
+            } else {
+                self.isHelperCheckFinished.accept(true)
             }
         }
     }
@@ -88,7 +96,7 @@ class PrivilegedHelperManager {
         // Check if the authorization went succesfully
         guard authStatus == errAuthorizationSuccess else {
             Logger.log("Couldn't obtain admin privileges: \(authStatus)", level: .error)
-            return .getAdmainFail
+            return .getAdminFail
         }
 
         // Launch the privileged helper using SMJobBless tool
@@ -134,29 +142,47 @@ class PrivilegedHelperManager {
         }
         return _helper
     }
-
-    private func helperStatus() -> Bool {
+    var timer: Timer?
+    private func getHelperStatus(callback:@escaping ((Bool)->Void)) {
+        
+        var called = false
+        let reply:((Bool)->Void) = {
+            installed in
+            if called {return}
+            called = true
+            callback(installed)
+        }
+        
         let helperURL = Bundle.main.bundleURL.appendingPathComponent("Contents/Library/LaunchServices/" + PrivilegedHelperManager.machServiceName)
         guard
             let helperBundleInfo = CFBundleCopyInfoDictionaryForURL(helperURL as CFURL) as? [String: Any],
-            let helperVersion = helperBundleInfo["CFBundleShortVersionString"] as? String,
-            let helper = self.helper() else {
-            return false
+            let helperVersion = helperBundleInfo["CFBundleShortVersionString"] as? String else {
+            Logger.log("check helper status fail")
+            reply(false)
+            return
         }
         let helperFileExists = FileManager.default.fileExists(atPath: "/Library/PrivilegedHelperTools/\(PrivilegedHelperManager.machServiceName)")
-        let timeout: TimeInterval = helperFileExists ? 15 : 2
-        var installed = false
-        let time = Date()
-        let semaphore = DispatchSemaphore(value: 0)
-        helper.getVersion { installedHelperVersion in
-            Logger.log("helper version \(installedHelperVersion ?? "") require version \(helperVersion)", level: .debug)
-            installed = installedHelperVersion == helperVersion
-            semaphore.signal()
+        if !helperFileExists {
+            reply(false)
+            return
         }
-        _ = semaphore.wait(timeout: DispatchTime.now() + timeout)
-        let interval = Date().timeIntervalSince(time)
-        Logger.log("check helper using time: \(interval)")
-        return installed
+        let timeout: TimeInterval = helperFileExists ? 15 : 5
+        let time = Date()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: timeout, repeats: false) { _ in
+            Logger.log("check helper timeout time: \(timeout)")
+            reply(false)
+        }
+        
+        helper()?.getVersion { [weak timer] installedHelperVersion in
+            timer?.invalidate()
+            timer = nil
+            Logger.log("helper version \(installedHelperVersion ?? "") require version \(helperVersion)", level: .debug)
+            let installed = installedHelperVersion == helperVersion
+            let interval = Date().timeIntervalSince(time)
+            Logger.log("check helper using time: \(interval)")
+            reply(installed)
+        }
     }
 }
 
@@ -168,9 +194,12 @@ extension PrivilegedHelperManager {
             return
         }
 
-        if useLecgyInstall {
-            useLecgyInstall = false
+        if useLegacyInstall {
+            useLegacyInstall = false
             legacyInstallHelper()
+            if !cancelInstallCheck {
+                checkInstall()
+            }
             return
         }
 
@@ -179,16 +208,19 @@ extension PrivilegedHelperManager {
             return
         }
         result.alertAction()
-        useLecgyInstall = result.shouldRetryLegacyWay()
+        useLegacyInstall = result.shouldRetryLegacyWay()
         NSAlert.alert(with: result.alertContent)
+        if !cancelInstallCheck {
+            checkInstall()
+        }
     }
 
     private func showInstallHelperAlert() -> Bool {
         let alert = NSAlert()
-        alert.messageText = NSLocalizedString("ClashX needs to install/update a helper tool with administrator privileges to set system proxy quickly.If not helper tool installed, ClashX won't be able to set your system proxy", comment: "")
+        alert.messageText = NSLocalizedString("ClashX needs to install/update a helper tool with administrator privileges, otherwise ClashX won't be able to configure system proxy.", comment: "")
         alert.alertStyle = .warning
-        if useLecgyInstall {
-            alert.addButton(withTitle: NSLocalizedString("Lecgy Install", comment: ""))
+        if useLegacyInstall {
+            alert.addButton(withTitle: NSLocalizedString("Legacy Install", comment: ""))
         } else {
             alert.addButton(withTitle: NSLocalizedString("Install", comment: ""))
         }
@@ -199,6 +231,7 @@ extension PrivilegedHelperManager {
             return true
         case .alertThirdButtonReturn:
             cancelInstallCheck = true
+            isHelperCheckFinished.accept(true)
             Logger.log("cancelInstallCheck = true", level: .error)
             return true
         default:
@@ -220,15 +253,15 @@ fileprivate struct AppAuthorizationRights {
 fileprivate enum DaemonInstallResult {
     case success
     case authorizationFail
-    case getAdmainFail
+    case getAdminFail
     case blessError(Int)
 
     var alertContent: String {
         switch self {
         case .success:
             return ""
-        case .authorizationFail: return "Create authorization fail!"
-        case .getAdmainFail: return "Get admain authorization fail!"
+        case .authorizationFail: return "Failed to create authorization!"
+        case .getAdminFail: return "Failed to get admin authorization!"
         case let .blessError(code):
             switch code {
             case kSMErrorInternalFailure: return "blessError: kSMErrorInternalFailure"
